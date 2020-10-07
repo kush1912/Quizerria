@@ -1,0 +1,3 @@
+git init  //initialise
+git add .   //adds all the files in stahing area
+git commit    //changes commit 

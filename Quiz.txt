@@ -1,0 +1,64 @@
+express --view=pug Quiz
+
+npm install    cd Quiz && npm install
+
+SET DEBUG=quiz:* & npm start
+
+npm i nodemon
+
+
+    
+      <!---  <select class="form-control" id="titlesDropdown">
+            <% for(var i=0; i<cat.length; i++) {%>
+               <option><%= cat[i] %></option>
+            <% } %>
+      </select>
+    -->
+
+
+
+        <% for(var i=0; i < docs.length;) { %>
+            <form id="add question" name="add" method="post" action="/score">
+            <h1><%= docs[i].question %></h1><br>
+            <input type="radio" name="option" value=1 checked="checked"/> <%= docs[i].option1 %><br>
+            <input type="radio" name="option" value=2 /> <%= docs[i].option2 %><br>
+            <input type="radio" name="option" value=3 /> <%= docs[i].option3 %><br>
+            <button id="add" type="submit" action="\score ">SUBMIT</button>
+            </form>    
+        <% } %>  
+
+
+
+
+/* 1 */
+{
+    "_id" : ObjectId("5ca862a0293f07a20282fb61"),
+    "question" : "Which one is the smallest prime number ?",
+    "option 1" : "0",
+    "option 2" : "1",
+    "option 3" : "2",
+    "answer" : "2",
+    "category" : "logic"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5ca86389293f07a20282fb62"),
+    "question" : "what is the famous pythogoras formula ?",
+    "option 1" : "A^2=B^2=C^2",
+    "option 2" : "A^2+B^2=C^2",
+    "option 3" : "A^2-B^2=C^2",
+    "answer" : "A^2+B^2=C^2",
+    "category" : "logic"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5ca8759d7aca9d2ad45cb5fd"),
+    "question" : "Who is the first Miss Universe from India ?",
+    "option 1" : "Aishwarya Rai Bachhan",
+    "option 2" : "Lara Dutta",
+    "option 3" : "Sushmita Sen",
+    "answer" : "Sushmita sen",
+    "category" : "General Knowledge"
+}
